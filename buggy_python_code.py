@@ -9,11 +9,11 @@ import flask
 # Input injection
 def transcode_file(filename):
     command = 'ffmpeg -i "{source}" output_file.mpg'.format(source=filename)
-    subprocess.call(command, shell=True)  # a bad idea!
+    # subprocess.call(command, shell=True)  # a bad idea!
 
 
 # Assert statements
-def foo(user):
+def foo_(user):
     assert user.is_admin, 'user does not have access'
     # secure code...
 
